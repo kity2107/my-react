@@ -1,10 +1,14 @@
+import React from 'react';
+
 function Welcome(props) {
+  const { username } = props;
   return (
     <div className="container">
       <div className="Fitner-User-Info">
-        <h1>Hello {props.username}!</h1>
-        <p>Lets work to get someone gains!</p>
+        <h1>Bienvenido: {username}!</h1>
+        <p>Trabajemos para Mejorar!</p>
       </div>
     </div>
   );
 }
+export default Welcome;
