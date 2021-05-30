@@ -15,9 +15,11 @@ export default function Reloj() {
   return (
     <div className="cargar">
       <div className="reloj">
-        <h2>Hora:{hora}</h2>
+        <h2>
+          Hora:{hora}
+          <GifReloj />
+        </h2>
       </div>
-      <GifReloj />
     </div>
   );
 }

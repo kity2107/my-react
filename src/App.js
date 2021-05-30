@@ -1,19 +1,14 @@
 import Footer from './Components/Footer/';
-import Cards from './Components/Cards/';
+import Cards from './Components/Cards/index';
 import Component from './Components/EstadosuseState/index';
-import exerciseImg from './images/exercise.png';
+import Botones from './Components/Botones';
 
 function App() {
   return (
     <div>
       <Component />
-      <Cards
-        title="Technique Guides"
-        description="Learn amazing street workout and calisthenics"
-        img={exerciseImg}
-        leftColor="#a74cf2"
-        rightColor="#617bfb"
-      />
+      <Cards />
+      <Botones variant="contained" color="secondary" title="ok" />
       <Footer />
     </div>
   );
