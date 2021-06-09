@@ -3,34 +3,32 @@ import Loading from '../../Components/Loading/Loading';
 import Cards from '../Cards/Cards';
 import FatalError from '../Errors/500';
 
-function ExerciseLista(props) {
+export default function ExerciseLista(props) {
   const [ejercicios, setEjercicios] = useState([]);
 
   const [loading, setLoading] = useState(true);
-  let merror = null;
+
+  let err = null;
 
   useEffect(() => {
-    try {
-      fetch('http://localhost:8000/api/exercises')
-        .then((response) => {
-          return response.json();
-        })
-        .then((dat) => {
-          setEjercicios(dat);
+    fetch('http://localhost:8000/api/exercises')
+      .then((response) => {
+        return response.json();
+      })
+      .then((dat) => {
+        setEjercicios(dat);
 
-          setLoading(false);
-          // console.log('paso a ser falso');
-        });
-    } catch (e) {
-      merror = e;
-    }
+        setLoading(false);
+        // console.log('paso a ser falso');
+      })
+      .catch((error) => {
+        console.log('el error es: ' + error);
+        return <FatalError />;
+      });
   }, []);
 
   if (loading) {
     return <Loading />;
-  }
-  if (merror != null) {
-    return <FatalError />;
   }
 
   return (
@@ -50,4 +48,3 @@ function ExerciseLista(props) {
     </div>
   );
 }
-export default ExerciseLista;
