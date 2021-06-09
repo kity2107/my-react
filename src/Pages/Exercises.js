@@ -1,5 +1,5 @@
-import Footer from '../Components/Footer';
-import Component from '../Components/EstadosuseState/index';
+// import Footer from '../Components/Footer';
+// import Component from '../Components/EstadosuseState/index';
 import Botones from '../Components/Botones';
 import Welcome from '../Components/Bienvenida/Welcome';
 import ExerciseLista from '../Components/Exercises/ExerciseLista';
