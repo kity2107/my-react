@@ -6,6 +6,7 @@ import NotFound from './Pages/NotFound';
 import Calc from './Pages/Calc';
 import Clase from './Pages/Clase';
 import Cargando from './Components/Loading/Loading';
+import Codigo from './Components/Codigo';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route exact path="/calc" component={Calc} />
         <Route exact path="/clase" component={Clase} />
         <Route exact path="/cargando" component={Cargando} />
+        <Route exact path="/codigo" component={Codigo} />
 
         <Route component={NotFound} />
       </Switch>

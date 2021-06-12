@@ -2,7 +2,7 @@
 // import Component from '../Components/EstadosuseState/index';
 import Botones from '../Components/Botones';
 import Welcome from '../Components/Bienvenida/Welcome';
-import ExerciseLista from '../Components/Exercises/ExerciseLista';
+import ExerciseLista from '../Components/Cards/ExerciseLista';
 
 const Exercises = ({ data }) => {
   return (

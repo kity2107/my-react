@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
-import Loading from '../../Components/Loading/Loading';
-import Cards from '../Cards/Cards';
-import FatalError from '../Errors/500';
+import Loading from '../Loading/Loading';
+import Cards from './Cards';
+//import FatalError from '../Errors/500';
 
 export default function ExerciseLista(props) {
   const [ejercicios, setEjercicios] = useState([]);
 
   const [loading, setLoading] = useState(true);
-
-  let err = null;
+  // const [base, setBase] = useState(true);
 
   useEffect(() => {
     fetch('http://localhost:8000/api/exercises')
@@ -23,13 +22,23 @@ export default function ExerciseLista(props) {
       })
       .catch((error) => {
         console.log('el error es: ' + error);
-        return <FatalError />;
+        // setBase(false);
+        // control();
       });
   }, []);
 
   if (loading) {
     return <Loading />;
   }
+
+  // function control() {
+  //   if (base) {
+  //     console.log(base);
+  //     return <FatalError />;
+  //   } else {
+  //     console.log('Conexion exitosa');
+  //   }
+  // }
 
   return (
     <div>

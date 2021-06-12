@@ -13,7 +13,7 @@ const ExerciseForm = ({ onChange, onSubmit, form }) => (
           value={form.title}
         />
       </div>
-      <div className="form-group">
+      {/* <div className="form-group">
         <input
           type="text"
           className="form-control"
@@ -54,7 +54,7 @@ const ExerciseForm = ({ onChange, onSubmit, form }) => (
             value={form.rightColor}
           />
         </div>
-      </div>
+      </div> */}
 
       <button type="submit" className="btn btn-primary float-right">
         Submit
